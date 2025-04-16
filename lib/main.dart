@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
       translations: Languages(),
       // And for the app select the language you want to use
       locale: Locale('en_US'),
+      // In case if the locale has no translation than the fall back locale will be used
+      fallbackLocale: Locale('en_US'),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
