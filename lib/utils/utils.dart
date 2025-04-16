@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:getx_mvvm/res/colors/app_color.dart';
 
 class Utils {
 
@@ -14,8 +15,10 @@ class Utils {
   static toastMessage(String message) {
     Fluttertoast.showToast(
         msg: message,
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.blackColor,
     );
   }
+
+
 
 }
