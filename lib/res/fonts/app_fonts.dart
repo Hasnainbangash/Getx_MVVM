@@ -1,3 +1,3 @@
 class AppFonts {
-  static const String robotBold = 'Schyler-Regular';
+  static const String schylerRegular = 'Schyler-Regular';
 }
