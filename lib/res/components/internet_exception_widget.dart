@@ -15,7 +15,7 @@ class _InternetExceptionWidgetState extends State<InternetExceptionWidget> {
         padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          Icon(Icons.cloud_off, color: AppColor.,),
+          Icon(Icons.cloud_off, color: AppColor.redColor),
         ],
       ),
     );
