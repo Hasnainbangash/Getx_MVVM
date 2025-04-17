@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_mvvm/data/app_exceptions.dart';
+import 'package:getx_mvvm/res/assets/image_assets.dart';
 import 'package:getx_mvvm/utils/utils.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
       // floatingActionButton: FloatingActionButton(onPressed: (){
       //   throw InternetException('message');
       // }),
+      body: Image(
+        image: AssetImage(ImageAssets.splashScreen),
+      ),
       floatingActionButton: FloatingActionButton(
           onPressed: (){
             Utils.toastMessageCenter('Hasnain');
