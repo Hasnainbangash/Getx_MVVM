@@ -25,24 +25,31 @@ class _InternetExceptionWidgetState extends State<InternetExceptionWidget> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: height * 0.15),
+
             Icon(Icons.cloud_off, color: AppColor.redColor, size: 50),
+
             Padding(
               padding: const EdgeInsets.only(top: 30),
               child: Text('internet_exception'.tr, textAlign: TextAlign.center,),
             ),
+
             SizedBox(height: height * 0.15),
-            Container(
-              height: 44,
-              width: 160,
-              decoration: BoxDecoration(
-                color: AppColor.primaryColor,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Center(
-                  child: Text(
-                      'Retry',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
-                  ),
+
+            InkWell(
+              onTap: widget.onPress,
+              child: Container(
+                height: 44,
+                width: 160,
+                decoration: BoxDecoration(
+                  color: AppColor.primaryColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                    child: Text(
+                        'Retry',
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white),
+                    ),
+                ),
               ),
             ),
           ],
