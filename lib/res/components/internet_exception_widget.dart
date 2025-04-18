@@ -12,12 +12,20 @@ class InternetExceptionWidget extends StatefulWidget {
 class _InternetExceptionWidgetState extends State<InternetExceptionWidget> {
   @override
   Widget build(BuildContext context) {
+
+    final height = MediaQuery.of(context).size.height;
+
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          Icon(Icons.cloud_off, color: AppColor.redColor),
-          Text('internet_exception'.tr)
+          SizedBox(height: height * 0.15),
+          Icon(Icons.cloud_off, color: AppColor.redColor, size: 50),
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: Text('internet_exception'.tr),
+          ),
+          SizedBox(height: height * 0.15),
         ],
       ),
     );
