@@ -15,23 +15,23 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return InternetExceptionWidget();
-    // return Scaffold(
-    //   appBar: AppBar(
-    //     title: Text('email_hint'.tr),
-    //   ),
-    //   // floatingActionButton: FloatingActionButton(onPressed: (){
-    //   //   throw InternetException('message');
-    //   // }),
-    //   body: Image(
-    //     image: AssetImage(ImageAssets.splashScreen),
-    //   ),
-    //   floatingActionButton: FloatingActionButton(
-    //       onPressed: (){
-    //         Utils.toastMessageCenter('Hasnain');
-    //         Utils.toastMessage('Hasnain');
-    //       },
-    //   ),
-    // );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('email_hint'.tr),
+      ),
+      // floatingActionButton: FloatingActionButton(onPressed: (){
+      //   throw InternetException('message');
+      // }),
+      // body: Image(
+      //   image: AssetImage(ImageAssets.splashScreen),
+      // ),
+      // floatingActionButton: FloatingActionButton(
+      //     onPressed: (){
+      //       Utils.toastMessageCenter('Hasnain');
+      //       Utils.toastMessage('Hasnain');
+      //     },
+      // ),
+      body: InternetExceptionWidget(),
+    );
   }
 }
