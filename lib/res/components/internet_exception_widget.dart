@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_mvvm/res/colors/app_color.dart';
+import 'package:get/get.dart';
 
 class InternetExceptionWidget extends StatefulWidget {
   const InternetExceptionWidget({super.key});
@@ -16,6 +17,7 @@ class _InternetExceptionWidgetState extends State<InternetExceptionWidget> {
       child: Column(
         children: [
           Icon(Icons.cloud_off, color: AppColor.redColor),
+          Text('internet_exception'.tr)
         ],
       ),
     );
