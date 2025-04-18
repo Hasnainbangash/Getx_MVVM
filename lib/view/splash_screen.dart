@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_mvvm/data/app_exceptions.dart';
 import 'package:getx_mvvm/res/assets/image_assets.dart';
+import 'package:getx_mvvm/res/components/general_exception.dart';
 import 'package:getx_mvvm/res/components/internet_exception_widget.dart';
 import 'package:getx_mvvm/utils/utils.dart';
 import 'package:get/get.dart';
@@ -31,7 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
       //       Utils.toastMessage('Hasnain');
       //     },
       // ),
-      body: InternetExceptionWidget(onPress: () {}),
+      // body: InternetExceptionWidget(onPress: () {}),
+      body: GeneralExceptionWidget(onPress: () {}),
     );
   }
 }

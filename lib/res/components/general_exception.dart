@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:getx_mvvm/res/colors/app_color.dart';
 import 'package:get/get.dart';
 
-class PersonalExceptionWidget extends StatefulWidget {
+class GeneralExceptionWidget extends StatefulWidget {
 
   final VoidCallback onPress;
 
-  const PersonalExceptionWidget({super.key, required this.onPress});
+  const GeneralExceptionWidget({super.key, required this.onPress});
 
   @override
-  State<PersonalExceptionWidget> createState() => _PersonalExceptionWidgetState();
+  State<GeneralExceptionWidget> createState() => _GeneralExceptionWidgetState();
 }
 
-class _PersonalExceptionWidgetState extends State<PersonalExceptionWidget> {
+class _GeneralExceptionWidgetState extends State<GeneralExceptionWidget> {
   @override
   Widget build(BuildContext context) {
 
@@ -30,7 +30,7 @@ class _PersonalExceptionWidgetState extends State<PersonalExceptionWidget> {
 
             Padding(
               padding: const EdgeInsets.only(top: 30),
-              child: Text('internet_exception'.tr, textAlign: TextAlign.center,),
+              child: Text('general_exception'.tr, textAlign: TextAlign.center,),
             ),
 
             SizedBox(height: height * 0.15),
