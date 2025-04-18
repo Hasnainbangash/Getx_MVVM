@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //       Utils.toastMessage('Hasnain');
       //     },
       // ),
-      body: InternetExceptionWidget(),
+      body: InternetExceptionWidget(onPress: () {}),
     );
   }
 }
