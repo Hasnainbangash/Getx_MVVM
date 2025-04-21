@@ -29,7 +29,6 @@ class _LoginViewState extends State<LoginView> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
             Form(
               key: _formKey,
               child: Column(
@@ -52,7 +51,9 @@ class _LoginViewState extends State<LoginView> {
                 title: 'login'.tr,
                 width: 200,
                 onPress: () {
+                  if(_formKey.currentState!.validate()) {
 
+                  }
                 }
             )
           ],
