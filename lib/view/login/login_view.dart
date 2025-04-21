@@ -51,7 +51,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
 
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   TextFormField(
                     controller: loginViewModel.passwordController.value,
@@ -74,7 +74,7 @@ class _LoginViewState extends State<LoginView> {
               ),
             ),
 
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
 
             RoundButton(
                 title: 'login'.tr,
