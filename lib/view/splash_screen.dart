@@ -6,6 +6,7 @@ import 'package:getx_mvvm/res/components/internet_exception_widget.dart';
 import 'package:getx_mvvm/res/components/round_button.dart';
 import 'package:getx_mvvm/utils/utils.dart';
 import 'package:get/get.dart';
+import 'package:getx_mvvm/view_models/services/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,6 +16,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  SplashServices splashServices = SplashServices();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    splashServices.isLogin();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
