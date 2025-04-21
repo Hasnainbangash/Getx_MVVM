@@ -42,8 +42,29 @@ class _LoginViewState extends State<LoginView> {
                         Utils.snackBar('Email', 'Enter email');
                       }
                     },
+                    onFieldSubmitted: (value){
+                      Utils.fieldFocusChange(context, loginViewModel.emailFocusNode.value, loginViewModel.passwordFocusNode.value);
+                    },
                     decoration: InputDecoration(
                       hintText: 'email_hint'.tr,
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+
+                  SizedBox(height: 20),
+
+                  TextFormField(
+                    controller: loginViewModel.passwordController.value,
+                    focusNode: loginViewModel.passwordFocusNode.value,
+                    validator: (value) {
+                      if(value!.isEmpty) {
+                        Utils.snackBar('Password', 'Enter password');
+                      }
+                    },
+                    onFieldSubmitted: (value){
+                    },
+                    decoration: InputDecoration(
+                      hintText: 'password_hint'.tr,
                       border: OutlineInputBorder(),
                     ),
                   ),
