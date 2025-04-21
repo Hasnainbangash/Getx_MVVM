@@ -41,7 +41,10 @@ class NetworkApiServices extends BaseApiServices {
 
     try {
       final response = await http.post(Uri.parse(url),
-        body: jsonEncode(data),
+        // If data is in raw form than encode it
+        // body: jsonEncode(data),
+        // If data is not in raw form than
+        body: data,
       ).timeout(const Duration(seconds: 10));
       responseJson = returnResponse(response);
     } on SocketException {
