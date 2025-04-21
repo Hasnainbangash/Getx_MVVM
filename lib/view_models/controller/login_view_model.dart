@@ -13,14 +13,19 @@ class LoginViewModel extends GetxController {
   final emailFocusNode = FocusNode().obs;
   final passwordFocusNode = FocusNode().obs;
 
+  RxBool loading = false.obs;
+
   void loginApi() {
+    loading.value = true;
     Map data = {
       'email' : emailController.value.text,
       'password' : passwordController.value.text
     };
     _api.loginApi(data).then((value){
+      loading.value = false;
       Utils.snackBar('Login', 'Login succesfully');
     }).onError((error, stackTrace) {
+      loading.value = false;
       Utils.snackBar('Error', error.toString());
     });
   }

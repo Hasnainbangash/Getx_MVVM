@@ -50,6 +50,10 @@ class NetworkApiServices extends BaseApiServices {
       throw RequestTimeOut('');
     }
 
+    if(kDebugMode) {
+      print(responseJson);
+    }
+
     return responseJson;
   }
 
