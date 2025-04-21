@@ -8,6 +8,7 @@ class Languages extends Translations {
       'internet_exception' : "We're unable to show results.\nPlease check you data\nconnection.",
       'genral_exception' : "We're unable to process your request.\n Please try again.",
       'welcome_back' : "Welcome\nBack",
+      'login' : "Login",
     },
     'ur_PK' : {
       'enter_email' : 'ای میل درج کریں',
