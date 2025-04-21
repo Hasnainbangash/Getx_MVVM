@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_mvvm/res/components/round_button.dart';
+import '../../view_models/controller/login_view_model.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -9,6 +11,9 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+
+  final LoginViewModel loginViewModel = Get.put(LoginViewModel());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,10 +29,21 @@ class _LoginViewState extends State<LoginView> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextFormField(
+              controller: loginViewModel.emailController.value,
+              focusNode: loginViewModel.emailFocusNode.value,
               decoration: InputDecoration(
-                hintText: '',
+                hintText: 'email_hint'.tr,
+                border: OutlineInputBorder(),
               ),
             ),
+
+            SizedBox(height: 40),
+
+            RoundButton(
+                title: 'login'.tr,
+                width: 200,
+                onPress: () {}
+            )
           ],
         ),
       ),
