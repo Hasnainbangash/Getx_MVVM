@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_mvvm/res/components/round_button.dart';
+import 'package:getx_mvvm/utils/utils.dart';
 import '../../view_models/controller/login_view_model.dart';
 
 class LoginView extends StatefulWidget {
@@ -36,6 +37,11 @@ class _LoginViewState extends State<LoginView> {
                   TextFormField(
                     controller: loginViewModel.emailController.value,
                     focusNode: loginViewModel.emailFocusNode.value,
+                    validator: (value) {
+                      if(value!.isEmpty) {
+                        Utils.snackBar('Email', 'Enter email');
+                      }
+                    },
                     decoration: InputDecoration(
                       hintText: 'email_hint'.tr,
                       border: OutlineInputBorder(),
