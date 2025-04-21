@@ -6,7 +6,8 @@ class Languages extends Translations {
     'en_US' : {
       'email_hint' : 'Enter email',
       'internet_exception' : "We're unable to show results.\nPlease check you data\nconnection.",
-      'genral_exception' : "We're unable to process your request.\n Please try again."
+      'genral_exception' : "We're unable to process your request.\n Please try again.",
+      'welcome_back' : "Welcome\nBack",
     },
     'ur_PK' : {
       'enter_email' : 'ای میل درج کریں',
