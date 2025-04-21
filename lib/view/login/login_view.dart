@@ -29,12 +29,20 @@ class _LoginViewState extends State<LoginView> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextFormField(
-              controller: loginViewModel.emailController.value,
-              focusNode: loginViewModel.emailFocusNode.value,
-              decoration: InputDecoration(
-                hintText: 'email_hint'.tr,
-                border: OutlineInputBorder(),
+
+            Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  TextFormField(
+                    controller: loginViewModel.emailController.value,
+                    focusNode: loginViewModel.emailFocusNode.value,
+                    decoration: InputDecoration(
+                      hintText: 'email_hint'.tr,
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ],
               ),
             ),
 
@@ -43,7 +51,9 @@ class _LoginViewState extends State<LoginView> {
             RoundButton(
                 title: 'login'.tr,
                 width: 200,
-                onPress: () {}
+                onPress: () {
+
+                }
             )
           ],
         ),
