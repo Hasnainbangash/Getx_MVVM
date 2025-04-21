@@ -17,10 +17,19 @@ class _LoginViewState extends State<LoginView> {
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
-      body: Column(
-        children: [
-
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: '',
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
