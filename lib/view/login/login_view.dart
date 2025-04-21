@@ -13,6 +13,7 @@ class LoginView extends StatefulWidget {
 class _LoginViewState extends State<LoginView> {
 
   final LoginViewModel loginViewModel = Get.put(LoginViewModel());
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
