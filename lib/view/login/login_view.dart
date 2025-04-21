@@ -56,6 +56,8 @@ class _LoginViewState extends State<LoginView> {
                   TextFormField(
                     controller: loginViewModel.passwordController.value,
                     focusNode: loginViewModel.passwordFocusNode.value,
+                    obscureText: true,
+                    obscuringCharacter: '*',
                     validator: (value) {
                       if(value!.isEmpty) {
                         Utils.snackBar('Password', 'Enter password');
