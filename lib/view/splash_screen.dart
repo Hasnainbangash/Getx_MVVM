@@ -18,29 +18,35 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('email_hint'.tr),
-      ),
-      // floatingActionButton: FloatingActionButton(onPressed: (){
-      //   throw InternetException('message');
-      // }),
-      // body: Image(
-      //   image: AssetImage(ImageAssets.splashScreen),
-      // ),
-      // floatingActionButton: FloatingActionButton(
-      //     onPressed: (){
-      //       Utils.toastMessageCenter('Hasnain');
-      //       Utils.toastMessage('Hasnain');
-      //     },
-      // ),
-      // body: InternetExceptionWidget(onPress: () {}),
-      // body: GeneralExceptionWidget(onPress: () {}),
-      body: Column(
-        children: [
-          RoundButton(onPress: (){}, title: 'Login', width: double.infinity, loading: true,),
-          RoundButton(onPress: (){}, title: 'Singup', width: 200,),
-        ],
-      ),
+      backgroundColor: Colors.teal,
     );
+
+
+
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text('email_hint'.tr),
+    //   ),
+    //   // floatingActionButton: FloatingActionButton(onPressed: (){
+    //   //   throw InternetException('message');
+    //   // }),
+    //   // body: Image(
+    //   //   image: AssetImage(ImageAssets.splashScreen),
+    //   // ),
+    //   // floatingActionButton: FloatingActionButton(
+    //   //     onPressed: (){
+    //   //       Utils.toastMessageCenter('Hasnain');
+    //   //       Utils.toastMessage('Hasnain');
+    //   //     },
+    //   // ),
+    //   // body: InternetExceptionWidget(onPress: () {}),
+    //   // body: GeneralExceptionWidget(onPress: () {}),
+    //   body: Column(
+    //     children: [
+    //       RoundButton(onPress: (){}, title: 'Login', width: double.infinity, loading: true,),
+    //       RoundButton(onPress: (){}, title: 'Singup', width: 200,),
+    //     ],
+    //   ),
+    // );
   }
 }
