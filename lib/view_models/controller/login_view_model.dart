@@ -8,4 +8,8 @@ class LoginViewModel extends GetxController {
 
   final emailFocusNode = FocusNode().obs;
   final passwordFocusNode = FocusNode().obs;
+
+  void loginApi() {
+
+  }
 }
