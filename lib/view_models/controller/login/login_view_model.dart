@@ -32,7 +32,7 @@ class LoginViewModel extends GetxController {
         Utils.snackBar('Login', value['error']);
       } else {
         userPreferences.saveUser(UserModel.fromJson(value)).then((value) {
-          Get.toNamed(RoutesName.homeView)
+          Get.toNamed(RoutesName.homeView);
         }).onError((error, stackTrace) {
 
         });
