@@ -15,8 +15,10 @@ class UserPreferences {
   Future<UserModel> getUser() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     String? token = sp.getString('token');
+    bool? isLogin = sp.getBool('isLogin');
     return UserModel(
       token: token,
+      isLogin: isLogin,
     );
   }
 
