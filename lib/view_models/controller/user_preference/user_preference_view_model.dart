@@ -1,21 +1,29 @@
-import 'package:get/get.dart';
 import 'package:getx_mvvm/models/login/user_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class UserPreferences extends GetxController {
+class UserPreferences {
 
+  // This function saves the user data to shared preferences
   Future<bool> saveUser(UserModel responseModel) async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     sp.setString('token', responseModel.token.toString());
     return true;
   }
 
+  // This function get user data from shared preferences
   Future<UserModel> getUser() async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     String? token = sp.getString('token');
     return UserModel(
       token: token,
     );
+  }
+
+  // This function removes user data from the shared preferences
+  Future<bool> removeUser() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.clear();
+    return true;
   }
 
 }
