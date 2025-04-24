@@ -31,13 +31,19 @@ class LoginViewModel extends GetxController {
       if(value['error'] == 'user not found') {
         Utils.snackBar('Login', value['error']);
       } else {
-        userPreferences.saveUser(UserModel.fromJson(value)).then((value) {
+
+        UserModel userModel = UserModel(
+          token: value['token'],
+          isLogin: true,
+        );
+
+        userPreferences.saveUser(userModel).then((value) {
           Get.toNamed(RoutesName.homeView);
         }).onError((error, stackTrace) {
 
         });
-
         Utils.snackBar('Login', 'Login succesfully');
+
       }
       //  Utils.snackBar('Login', 'Login succesfully');
     }).onError((error, stackTrace) {

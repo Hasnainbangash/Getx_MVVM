@@ -2,7 +2,7 @@ class UserModel {
   String? token;
   bool? isLogin;
 
-  UserModel({this.token});
+  UserModel({this.token, this.isLogin});
 
   UserModel.fromJson (Map<String, dynamic> json) {
     token = json ['token'];

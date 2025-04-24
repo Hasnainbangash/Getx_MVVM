@@ -7,6 +7,7 @@ class UserPreferences {
   Future<bool> saveUser(UserModel responseModel) async {
     SharedPreferences sp = await SharedPreferences.getInstance();
     sp.setString('token', responseModel.token.toString());
+    sp.setBool('isLogin', responseModel.isLogin!);
     return true;
   }
 
