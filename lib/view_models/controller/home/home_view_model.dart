@@ -22,6 +22,8 @@ class HomeController extends GetxController {
       setRxRequestStatus(Status.COMPLETED);
       setUserList(value);
     }).onError((error, stackTrace) {
+      print(error);
+      print(stackTrace);
       setRxRequestStatus(Status.ERROR);
     });
   }
