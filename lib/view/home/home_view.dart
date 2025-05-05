@@ -37,13 +37,13 @@ class _HomeViewState extends State<HomeView> {
           }, icon: Icon(Icons.logout)),
         ],
       ),
-      body: Obx((){
+      body: Obx(() {
         switch(homeController.rxRequestStatus.value){
           case Status.LOADING:
             return Center(child: CircularProgressIndicator());
           case Status.ERROR:
             return Text('Something went wrong');
-          case Status.LOADING:
+          case Status.COMPLETED:
             print('request successful');
             return ListView.builder(
               itemCount: homeController.userList.value.data!.length,
@@ -60,9 +60,9 @@ class _HomeViewState extends State<HomeView> {
               },
             );
           default:
+            return SizedBox();
         }
-        return SizedBox();
-      }),
+      })
     );
   }
 }
